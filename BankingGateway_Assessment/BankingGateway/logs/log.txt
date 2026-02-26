@@ -1,0 +1,122 @@
+2026-02-02 18:25:03.881 +05:30 [INF] Now listening on: https://localhost:7211
+2026-02-02 18:25:03.897 +05:30 [INF] Now listening on: http://localhost:5059
+2026-02-02 18:25:04.014 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-02 18:25:04.015 +05:30 [INF] Hosting environment: Development
+2026-02-02 18:25:04.015 +05:30 [INF] Content root path: C:\Users\Prabu S\source\repos\BankingGateway_Assessment\BankingGateway
+2026-02-02 18:25:05.999 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger - null null
+2026-02-02 18:25:06.177 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger - 301 0 null 185.665ms
+2026-02-02 18:25:06.199 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - null null
+2026-02-02 18:25:06.277 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - 200 null text/html;charset=utf-8 78.0342ms
+2026-02-02 18:25:06.368 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/swagger-ui.css - null null
+2026-02-02 18:25:06.368 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/swagger-ui-bundle.js - null null
+2026-02-02 18:25:06.370 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/swagger-ui-standalone-preset.js - null null
+2026-02-02 18:25:06.544 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-02-02 18:25:06.544 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-02-02 18:25:06.545 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 174.9299ms
+2026-02-02 18:25:06.545 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/swagger-ui.css - 200 152034 text/css 176.5802ms
+2026-02-02 18:25:06.580 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-02-02 18:25:06.580 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 211.6958ms
+2026-02-02 18:25:06.860 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-02 18:25:06.867 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - null null
+2026-02-02 18:25:06.867 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 7.326ms
+2026-02-02 18:25:07.152 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - 200 null text/javascript; charset=UTF-8 285.0699ms
+2026-02-02 18:25:08.425 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - null null
+2026-02-02 18:25:08.451 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.9394ms
+2026-02-02 18:25:08.510 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/favicon-32x32.png - null null
+2026-02-02 18:25:08.510 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-02-02 18:25:08.511 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/favicon-32x32.png - 200 628 image/png 1.3905ms
+2026-02-02 18:26:04.280 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Transfer - application/json 92
+2026-02-02 18:26:04.317 +05:30 [INF] Executing endpoint 'BankingGateway.Controllers.TransferController.MakeTransfer (BankingGateway)'
+2026-02-02 18:26:04.418 +05:30 [INF] Route matched with {action = "MakeTransfer", controller = "Transfer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult MakeTransfer(BankingGateway.Domain.RequestModel.TransferRequest) on controller BankingGateway.Controllers.TransferController (BankingGateway).
+2026-02-02 18:26:04.430 +05:30 [INF] Executed action BankingGateway.Controllers.TransferController.MakeTransfer (BankingGateway) in 6.7244ms
+2026-02-02 18:26:04.432 +05:30 [INF] Executed endpoint 'BankingGateway.Controllers.TransferController.MakeTransfer (BankingGateway)'
+2026-02-02 18:26:04.444 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'BankingGateway.Interfaces.IBankService' while attempting to activate 'BankingGateway.Controllers.TransferController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-02 18:26:04.458 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Transfer - 500 null text/plain; charset=utf-8 179.9899ms
+2026-02-02 18:27:26.512 +05:30 [INF] Now listening on: https://localhost:7211
+2026-02-02 18:27:26.531 +05:30 [INF] Now listening on: http://localhost:5059
+2026-02-02 18:27:26.972 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-02 18:27:26.973 +05:30 [INF] Hosting environment: Development
+2026-02-02 18:27:26.973 +05:30 [INF] Content root path: C:\Users\Prabu S\source\repos\BankingGateway_Assessment\BankingGateway
+2026-02-02 18:27:27.312 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - null null
+2026-02-02 18:27:27.592 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - 200 null text/html;charset=utf-8 293.4075ms
+2026-02-02 18:27:27.611 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-02 18:27:27.623 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 11.8268ms
+2026-02-02 18:27:28.194 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - null null
+2026-02-02 18:27:28.235 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.9058ms
+2026-02-02 18:27:28.575 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - null null
+2026-02-02 18:27:28.594 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.754ms
+2026-02-02 18:28:02.624 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Transfer - application/json 92
+2026-02-02 18:28:02.634 +05:30 [INF] Executing endpoint 'BankingGateway.Controllers.TransferController.MakeTransfer (BankingGateway)'
+2026-02-02 18:28:02.671 +05:30 [INF] Route matched with {action = "MakeTransfer", controller = "Transfer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult MakeTransfer(BankingGateway.Domain.RequestModel.TransferRequest) on controller BankingGateway.Controllers.TransferController (BankingGateway).
+2026-02-02 18:28:02.678 +05:30 [INF] Executed action BankingGateway.Controllers.TransferController.MakeTransfer (BankingGateway) in 3.6219ms
+2026-02-02 18:28:02.680 +05:30 [INF] Executed endpoint 'BankingGateway.Controllers.TransferController.MakeTransfer (BankingGateway)'
+2026-02-02 18:28:02.686 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'BankingGateway.Interfaces.IBankService' while attempting to activate 'BankingGateway.Controllers.TransferController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-02 18:28:02.691 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Transfer - 500 null text/plain; charset=utf-8 67.6344ms
+2026-02-02 18:32:24.503 +05:30 [INF] Now listening on: https://localhost:7211
+2026-02-02 18:32:24.523 +05:30 [INF] Now listening on: http://localhost:5059
+2026-02-02 18:32:24.713 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-02 18:32:24.713 +05:30 [INF] Hosting environment: Development
+2026-02-02 18:32:24.713 +05:30 [INF] Content root path: C:\Users\Prabu S\source\repos\BankingGateway_Assessment\BankingGateway
+2026-02-02 18:32:25.803 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - null null
+2026-02-02 18:32:26.089 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - 200 null text/html;charset=utf-8 300.5545ms
+2026-02-02 18:32:26.116 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-02 18:32:26.126 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 9.353ms
+2026-02-02 18:32:26.430 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - null null
+2026-02-02 18:32:26.480 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.1399ms
+2026-02-02 18:32:26.993 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - null null
+2026-02-02 18:32:27.015 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.6227ms
+2026-02-02 18:32:37.989 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Transfer - application/json 93
+2026-02-02 18:32:38.000 +05:30 [INF] Executing endpoint 'BankingGateway.Controllers.TransferController.MakeTransfer (BankingGateway)'
+2026-02-02 18:32:38.057 +05:30 [INF] Route matched with {action = "MakeTransfer", controller = "Transfer"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult MakeTransfer(BankingGateway.Domain.RequestModel.TransferRequest) on controller BankingGateway.Controllers.TransferController (BankingGateway).
+2026-02-02 18:32:38.071 +05:30 [INF] Executed action BankingGateway.Controllers.TransferController.MakeTransfer (BankingGateway) in 6.031ms
+2026-02-02 18:32:38.074 +05:30 [INF] Executed endpoint 'BankingGateway.Controllers.TransferController.MakeTransfer (BankingGateway)'
+2026-02-02 18:32:38.082 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'BankingGateway.Interfaces.IBankService' while attempting to activate 'BankingGateway.Controllers.TransferController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-02 18:32:38.096 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Transfer - 500 null text/plain; charset=utf-8 106.4929ms

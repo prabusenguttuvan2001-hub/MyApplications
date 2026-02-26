@@ -1,0 +1,6 @@
+@Sample_CRUD_for_Verisk_HostAddress = http://localhost:5078
+
+GET {{Sample_CRUD_for_Verisk_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

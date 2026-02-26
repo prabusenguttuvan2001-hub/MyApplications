@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C369EE62-D7C6-49D4-95DC-5F8828387DB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InsuranceRisk.Application</RootNamespace>
+    <AssemblyName>InsuranceRisk.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTOs\RiskRequest.cs" />
+    <Compile Include="DTOs\RiskResponse.cs" />
+    <Compile Include="Interfaces\IApplicantValidator.cs" />
+    <Compile Include="Interfaces\IRiskCalculator.cs" />
+    <Compile Include="Interfaces\IRiskService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Risk\BikeRiskCalculator.cs" />
+    <Compile Include="Risk\CarRiskCalculator.cs" />
+    <Compile Include="Risk\RiskCalculatorFactory.cs" />
+    <Compile Include="Services\RiskService.cs" />
+    <Compile Include="Validators\ApplicantValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InsuranceRisk.Domain\InsuranceRisk.Domain.csproj">
+      <Project>{40183fc8-cb3a-481c-a49c-9075f6fbea47}</Project>
+      <Name>InsuranceRisk.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InsuranceRisk.Infrastructure\InsuranceRisk.Infrastructure.csproj">
+      <Project>{3abd077b-f4d0-4310-83d2-ec8cf5d5e338}</Project>
+      <Name>InsuranceRisk.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
